@@ -16,4 +16,32 @@ class Book < ActiveRecord::Base
             book.errors[:name] << "I don't like exercise."
         end
     end
+
+    # validation callbacks
+    before_validation do |book|
+        book.name = self.name.gsub(/Cat/) do |matched|
+            "lovely #{matched}"
+        end
+    end
+
+#    # alternative
+#    before_validation :add_lovely_to_cat
+#    def add_lovely_to_cat
+#        book.name = self.name.gsub(/Cat/) do |matched|
+#            "lovely #{matched}"
+#        end
+#    end
+
+    after_destroy do |book|
+        Rails.logger.info "Book is deleted: #{book.attributes.inspect}"
+    end
+
+    def high_price?
+        price >= 5000
+    end
+
+    after_destroy :if => :high_price? do |book|
+        Rails.logger.warn "Book with high price is deleted: #{book.attributes.inspect}"
+        Rails.logger.warn "Please check!"
+    end
 end
