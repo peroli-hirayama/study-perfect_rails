@@ -4,4 +4,7 @@ class Book < ActiveRecord::Base
 #    default_scope -> { order("published_on desc") }
 
     belongs_to :publisher
+
+    has_many :book_authors
+    has_many :authors, through: :book_authors
 end
