@@ -1,21 +1,5 @@
 Rails.application.routes.draw do
-    get "/books/:id" => "books#show"
-
-    resources :publishers do # treat publishers as resource
-        resources :books # parentness of books under publishers
-
-        # use member to define action for a member
-        member do
-            get 'detail'
-        end
-
-        # use collection to define action for a whole set
-        collection do
-            get 'search'
-        end
-    end
-
-    resource :profile, only: %i{show edit update}
+  resources :tasks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
