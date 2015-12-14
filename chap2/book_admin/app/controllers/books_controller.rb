@@ -1,8 +1,9 @@
 class BooksController < ApplicationController
     def show
         @book = Book.find(params[:id])
-
-        # omit following rule
-#        render :show
+        respond_to do |format|
+            format.html
+            format.csv
+        end
     end
 end
