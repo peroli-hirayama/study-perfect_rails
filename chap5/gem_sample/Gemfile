@@ -34,6 +34,10 @@ gem 'pry-byebug', group: [:development, :test]
 gem 'hirb', group: [:development, :test]
 gem 'hirb-unicode', group: [:development, :test]
 
+# Add better_erros and binding_of_caller
+gem 'better_errors', group: [:development, :test]
+gem 'binding_of_caller', group: [:development, :test]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
