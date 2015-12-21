@@ -38,6 +38,9 @@ gem 'hirb-unicode', group: [:development, :test]
 gem 'better_errors', group: [:development, :test]
 gem 'binding_of_caller', group: [:development, :test]
 
+# Add rails-erd
+gem 'rails-erd', group: [:development, :test]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
