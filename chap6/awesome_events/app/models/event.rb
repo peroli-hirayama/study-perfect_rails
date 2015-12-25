@@ -13,6 +13,16 @@ class Event < ActiveRecord::Base
         owner_id == user.id
     end
 
+    # ransack searchに渡せるパラメータを限定する
+    def self.ransackable_attributes(auth_object = nil)
+        %w(name start_time)
+    end
+
+    # ransack search に渡せる関連を限定する（？）
+    def self.ransackable_associactions(auth_object = nil)
+        []
+    end
+
     private
 
     def start_time_should_be_before_end_time

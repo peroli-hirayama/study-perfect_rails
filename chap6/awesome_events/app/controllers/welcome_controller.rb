@@ -12,7 +12,7 @@ class WelcomeController < ApplicationController
   private
 
   def search_params
-      params.require(:q).permit! # Strong parameter
+      params.require(:q).permit(:name_cont, :start_time_gteq) # Strong parameter
   rescue
       { start_time_gteq: Time.zone.now }
   end
