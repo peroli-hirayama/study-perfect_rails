@@ -45,3 +45,6 @@ gem 'omniauth-twitter', '~> 1.0.1'
 # Pagenation feature
 gem 'kaminari', '~> 0.15.1'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+
+# Searching models feature
+gem 'ransack', '~> 1.2.2'
