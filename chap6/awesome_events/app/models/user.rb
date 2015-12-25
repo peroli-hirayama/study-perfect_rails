@@ -1,9 +1,15 @@
 class User < ActiveRecord::Base
     before_destroy :check_all_events_finished
 
-    # [TODO] オプションと挙動について改めて調べる。
+    # dependent: nullify で、削除対象に関連づくオブジェクトから見た、関連先はnullにセットされる
+    # http://railsguides.jp/association_basics.html#dependent
     has_many :created_events, class_name: 'Event', foreign_key: :owner_id, dependent: :nullify
     has_many :tickets, dependent: :nullify
+
+    # participating_eventsというリレーションを作成する。
+    # eventモデルを元とし、ticketsに対する結合になる。
+    # ここでいうと、関連するticketsに対するeventってことかな？
+    # http://railsguides.jp/association_basics.html#has-many-through%E9%96%A2%E9%80%A3%E4%BB%98%E3%81%91
     has_many :participating_events, through: :tickets, source: :event
 
     def self.find_or_create_from_auth_hash(auth_hash)
