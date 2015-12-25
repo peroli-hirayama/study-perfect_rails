@@ -48,3 +48,6 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 
 # Searching models feature
 gem 'ransack', '~> 1.2.2'
+
+# enable to upload images
+gem 'carrierwave', '~> 0.10.0'
