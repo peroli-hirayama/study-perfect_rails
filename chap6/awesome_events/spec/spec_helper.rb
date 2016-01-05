@@ -25,7 +25,6 @@ require 'capybara/rails'
 require 'capybara/rspec'
 
 RSpec.configure do |config|
-    config.include FactoryGirl::Syntax::Methods
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
@@ -86,4 +85,16 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 =end
+    config.include FactoryGirl::Syntax::Methods
+    config.before(:all, type: :feature) do
+        OmniAuth.config.test_mode = true
+        OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+            provider: 'twitter',
+            uid: '12345',
+            info: {
+                nickname: 'netwillnet',
+                image: 'http://example.com/netwillnet.jpg'
+            }
+        })
+    end
 end
