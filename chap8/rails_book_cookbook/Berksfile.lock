@@ -1,17 +1,19 @@
 DEPENDENCIES
   build-essential
-  database
   git
   imagemagick
-  memcached
   nginx
   nodejs
+  openssl
   rbenv
     git: git://github.com/fnichol/chef-rbenv.git
     revision: f2b53292e810dd2b43f6121f9958f5f29979dcb1
     ref: v0.7.2
   ruby_build
+  vim
   xml
+  yum-pkg
+    path: yum-pkg
 
 GRAPH
   7-zip (1.0.2)
@@ -25,9 +27,6 @@ GRAPH
   build-essential (2.2.4)
   chef-sugar (3.2.0)
   chef_handler (1.2.0)
-  compat_resource (12.5.26)
-  database (4.0.9)
-    postgresql (>= 1.0.0)
   dmg (2.3.0)
   git (4.3.5)
     build-essential (>= 0.0.0)
@@ -39,10 +38,6 @@ GRAPH
   imagemagick (0.2.3)
   java (1.36.0)
     apt (>= 0.0.0)
-  memcached (2.0.2)
-    compat_resource (>= 0.0.0)
-    runit (~> 1.0)
-    yum-epel (>= 0.0.0)
   nginx (2.7.6)
     apt (~> 2.2)
     bluepill (~> 2.3)
@@ -60,10 +55,6 @@ GRAPH
   openssl (4.4.0)
     chef-sugar (>= 3.1.1)
   packagecloud (0.1.1)
-  postgresql (4.0.0)
-    apt (>= 1.9.0)
-    build-essential (>= 0.0.0)
-    openssl (~> 4.0)
   rbenv (0.7.2)
     java (> 1.4.0)
     ruby_build (>= 0.0.0)
@@ -71,6 +62,7 @@ GRAPH
   ruby_build (0.8.0)
   runit (1.7.6)
     packagecloud (>= 0.0.0)
+  vim (2.0.0)
   windows (1.39.0)
     chef_handler (>= 0.0.0)
   xml (2.0.0)
@@ -79,3 +71,4 @@ GRAPH
   yum (3.8.2)
   yum-epel (0.6.5)
     yum (~> 3.2)
+  yum-pkg (0.1.0)
