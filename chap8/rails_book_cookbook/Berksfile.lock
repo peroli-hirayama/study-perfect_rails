@@ -1,0 +1,80 @@
+DEPENDENCIES
+  build-essential
+  git
+  imagemagick
+  nginx
+  nodejs
+  openssl
+  rails_book_cookbook
+    path: site-cookbooks/rails_book_cookbook
+  rbenv
+    git: git://github.com/fnichol/chef-rbenv.git
+    revision: f2b53292e810dd2b43f6121f9958f5f29979dcb1
+    ref: v0.7.2
+  ruby_build
+  simple_iptables
+    git: git://github.com/dcrosta/cookbook-simple-iptables.git
+    revision: fe0bf95bf38b17f5ac89f62ec3d674ddb2a712c9
+  vim
+  xml
+
+GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
+  apt (2.9.2)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  bluepill (2.4.1)
+    rsyslog (~> 2.0)
+  build-essential (2.2.4)
+  chef-sugar (3.2.0)
+  chef_handler (1.2.0)
+  dmg (2.3.0)
+  git (4.3.5)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  homebrew (2.0.3)
+    build-essential (>= 2.1.2)
+  imagemagick (0.2.3)
+  java (1.36.0)
+    apt (>= 0.0.0)
+  nginx (2.7.6)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  nodejs (2.4.4)
+    apt (>= 0.0.0)
+    ark (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  ohai (2.0.4)
+  openssl (4.4.0)
+    chef-sugar (>= 3.1.1)
+  packagecloud (0.1.1)
+  rails_book_cookbook (0.1.2)
+    rbenv (>= 0.0.0)
+    simple_iptables (>= 0.0.0)
+  rbenv (0.7.2)
+    java (> 1.4.0)
+    ruby_build (>= 0.0.0)
+  rsyslog (2.2.0)
+  ruby_build (0.8.0)
+  runit (1.7.6)
+    packagecloud (>= 0.0.0)
+  simple_iptables (0.7.3)
+  vim (2.0.0)
+  windows (1.39.0)
+    chef_handler (>= 0.0.0)
+  xml (2.0.0)
+    build-essential (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
+  yum (3.8.2)
+  yum-epel (0.6.5)
+    yum (~> 3.2)
