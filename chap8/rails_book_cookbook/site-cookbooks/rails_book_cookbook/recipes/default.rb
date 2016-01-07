@@ -6,3 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+%w[openssl libssl-dev libreadline-dev].each do |pkg|
+    package pkg do
+        action :install
+    end
+end

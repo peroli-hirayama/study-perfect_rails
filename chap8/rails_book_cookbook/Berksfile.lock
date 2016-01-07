@@ -14,8 +14,6 @@ DEPENDENCIES
   ruby_build
   vim
   xml
-  yum-pkg
-    path: yum-pkg
 
 GRAPH
   7-zip (1.0.2)
@@ -75,4 +73,3 @@ GRAPH
   yum (3.8.2)
   yum-epel (0.6.5)
     yum (~> 3.2)
-  yum-pkg (0.1.0)
