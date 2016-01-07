@@ -5,6 +5,8 @@ DEPENDENCIES
   nginx
   nodejs
   openssl
+  rails_book_cookbook
+    path: site-cookbooks/rails_book_cookbook
   rbenv
     git: git://github.com/fnichol/chef-rbenv.git
     revision: f2b53292e810dd2b43f6121f9958f5f29979dcb1
@@ -55,6 +57,8 @@ GRAPH
   openssl (4.4.0)
     chef-sugar (>= 3.1.1)
   packagecloud (0.1.1)
+  rails_book_cookbook (0.1.2)
+    rbenv (>= 0.0.0)
   rbenv (0.7.2)
     java (> 1.4.0)
     ruby_build (>= 0.0.0)

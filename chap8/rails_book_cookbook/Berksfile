@@ -1,6 +1,7 @@
 source "https://api.berkshelf.com"
 
 cookbook 'yum-pkg', path: 'yum-pkg'
+cookbook "rails_book_cookbook", path: "./site-cookbooks/rails_book_cookbook"
 
 cookbook 'git'
 cookbook 'build-essential'
