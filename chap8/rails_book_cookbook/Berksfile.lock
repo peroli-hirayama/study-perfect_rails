@@ -12,6 +12,9 @@ DEPENDENCIES
     revision: f2b53292e810dd2b43f6121f9958f5f29979dcb1
     ref: v0.7.2
   ruby_build
+  simple_iptables
+    git: git://github.com/dcrosta/cookbook-simple-iptables.git
+    revision: fe0bf95bf38b17f5ac89f62ec3d674ddb2a712c9
   vim
   xml
 
@@ -57,6 +60,7 @@ GRAPH
   packagecloud (0.1.1)
   rails_book_cookbook (0.1.2)
     rbenv (>= 0.0.0)
+    simple_iptables (>= 0.0.0)
   rbenv (0.7.2)
     java (> 1.4.0)
     ruby_build (>= 0.0.0)
@@ -64,6 +68,7 @@ GRAPH
   ruby_build (0.8.0)
   runit (1.7.6)
     packagecloud (>= 0.0.0)
+  simple_iptables (0.7.3)
   vim (2.0.0)
   windows (1.39.0)
     chef_handler (>= 0.0.0)
